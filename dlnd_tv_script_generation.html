@@ -14113,6 +14113,10 @@ Model Trained and Saved
 <p><strong>Answer:</strong></p>
 <ul>
 <li>First of all I selected <code>sequence_lengths = 10</code> since 10 previous words is a reasonable quantity to understand the context and predict the next word. Moreover, the model will converge faster compared to 20 or more words.</li>
+<li>I selected 256 as <code>batch_size</code> as a good trade-off for memory space.</li>
+<li>The number of epochs was set to 10 since I noticed that the loss can reach a value under 3.5 in that epoch-window.</li>
+<li>The <code>vocab_size</code> was set as equal to the lenght of the lookup table and equal to the <code>output_size</code> of the neural network.</li>
+<li>The <code>embedding_dim</code> was set to 200, which is a small value, but high enough to provide good results in the training.</li>
 <li>I decided to make <code>n_layers</code> equal to 2, in order to make a trade-off between complexity and performance to solve the problem.</li>
 <li>On the other side, I selected an <code>hidden_dim</code> equal to 256 which is not so high to avoid making the training too long.</li>
 </ul>
